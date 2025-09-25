@@ -13,6 +13,7 @@
 	font-weight: 400;
 	font-style: normal;
 	color: #484E47;
+	box-sizing: border-box;
 }
 
 html, body {
@@ -24,6 +25,7 @@ html, body {
 header {
 	height: auto;
 	background-color: #fff;
+	padding: 20px;
 }
 
 #header_top {
@@ -95,6 +97,7 @@ header {
 .main {
 	background-color: #fff;
 	max-width: 100%;
+	padding: 20px;
 }
 
 .main_top {
@@ -120,6 +123,7 @@ header {
 
 .main_left h1 {
 	display: block;
+	width: 110%;
 	padding-left: 10px;
 	font-size: 36px;
 	line-height: 1.5;
@@ -127,6 +131,7 @@ header {
 
 .main_left p {
 	display: block;
+	width: 110%;
 	padding: 5px 0 10px 10px;
 	font-size: 16px;
 	line-height: 1.7;
@@ -279,6 +284,7 @@ footer {
 	width: 100%;
 	background-color: #EAFFE6;
 	padding: 20px;
+	margin: 0;
 }
 
 /* ======フッタートップ====== */
@@ -313,6 +319,14 @@ table {
 	border-collapse: collapse;
 	text-align: center;
 	box-sizing: border-box;
+}
+
+table thead th {
+	background-color: #AAFFA2;
+}
+
+table tbody th {
+	background-color: #CFF7CC;
 }
 
 table th {
@@ -359,15 +373,15 @@ iframe {
 /* ======フッターレフト====== */
 
 .footer_left_logo img {
-	width: 100%;
-	padding: 20px;
+	width: 80%;
+	padding: 50px;
 }
 
 /* ======フッターライト====== */
 
 .footer_right_button img {
 	width: 70%;
-	margin: 50px auto;
+	margin: 55px auto;
 }
 
 .footer_right_button img:hover {
