@@ -1,0 +1,423 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* ======全体====== */
+
+*{
+	max-width: 1536px;
+	margin: 0;
+	padding: 0; 
+	box-sizing: border-box;
+	font-family: "Kiwi Maru", serif;
+	font-weight: 400;
+	font-style: normal;
+	color: #484E47;
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+/* ======ヘッダー====== */
+
+header {
+	height: auto;
+	background-color: #fff;
+}
+
+#header_top {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+}
+
+.header_top_logo img {
+	margin: 20px;
+}
+
+.header_top_right {
+	display: flex;
+}
+
+.header_top_right .header_button,
+.header_top_right .header_tel {
+	margin: 20px;
+}
+
+.header_button img:hover {
+	opacity: .8;
+}
+
+.footer_right_button {
+	display: block;
+}
+
+.header_nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header_nav ul li {
+	flex: 1;                 /* ← liを均等幅にする */
+	text-align: center;      /* 文字を中央寄せ */
+	position: relative;      /* 擬似要素の基準に */
+}
+
+.header_nav ul li a {
+	display: block;
+	padding: 10px 0;         /* 上下に余白 */
+	text-decoration: none;
+	color: #484E47;
+}
+
+.header_nav ul li a:hover {
+	color: #18CA07;
+}
+
+/* 境界線を li の右端に出す */
+.header_nav ul li:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 20%;
+	bottom: 20%;             /* ←上下に余白を残す */
+	width: 1px;
+	background: #484E47;
+}
+
+/* ======メインビジュアル====== */
+
+.main {
+	background-color: #fff;
+	max-width: 100%;
+}
+
+.main_top {
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	padding-top: 30px;
+}
+
+.main_left {
+	background-color: #fff;
+	width: 600px;
+	height: auto;
+	margin-right: 0;
+	margin-left: 60px;
+}
+
+.main_left .buildings {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.main_left h1 {
+	display: block;
+	padding-left: 10px;
+	font-size: 36px;
+	line-height: 1.5;
+}
+
+.main_left p {
+	display: block;
+	padding: 5px 0 10px 10px;
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+.main_left .town {
+	width: 120%;
+	height: auto;
+}
+
+.main_right {
+	width: 750px;
+	height: auto;
+	margin-right: 40px;
+}
+
+.main_right img {
+	width: 100%;
+	height: auto;
+	display: block; /* ← 下に変な隙間を作らない */
+}
+
+/* ======コンテンツ====== */
+
+.content {
+	
+}
+
+/* ======ニュース====== */
+
+#news {
+	max-width: 1000px;
+	margin: 40px auto;
+}
+
+#news .news_top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0;
+	border-bottom: 1px dotted #808080;
+}
+
+#news .news_top h2 {
+	font-size: 20px;
+}
+
+#news .news_top h2 span {
+	font-size: 40px;
+	color: #18CA07;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+}
+
+#news .news_top a {
+	text-decoration: none;
+}
+
+#news .news_top p {
+	font-size: 20px;
+	color: #18CA07;
+	font-weight: normal;
+}
+
+#news .news_top p:hover {
+	color: #484E47;
+	text-decoration: underline;
+}
+
+#news .news_content {
+	padding: 30px 30px;
+	border-bottom: 1px dotted #808080;
+}
+
+#news .news_content a {
+	text-decoration: none;
+}
+
+#news .news_content h3 {
+	font-size: 20px;
+}
+
+#news .news_content h3:hover {
+	text-decoration: underline;
+}
+
+#news .news_content h3 span {
+	color: #18CA07;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+}
+
+#news .news_content p {
+	font-size: 16px;
+	padding-top: 15px;
+}
+
+/* ======メニュー====== */
+
+.menu {
+	max-width: 1000px;
+	margin: 30px auto;
+	background-color: #fff;;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+}
+
+.menu ul {
+	list-style: none;
+}
+
+.menu_button {
+	width: 300px;
+	height: 420px;
+	margin: 20px;
+	background-color: #ECFDE9;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+}
+
+.menu_button:hover {
+	box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+	transform: scale(0.95);
+}
+
+.menu .menu_text {
+	width: 300px;
+	height: 120px;
+	padding-top: 35px;
+	border-radius: 10px;
+	font-size: 32px;
+}
+
+.menu .menu_text span {
+	font-size: 26px;
+}
+
+.menu .menu_text a {
+	text-decoration: none;
+}
+
+.menu .menu_image img {
+	width: 300px;
+	height: auto;
+}
+
+/* ======フッター====== */
+
+footer {
+	width: 100%;
+	background-color: #EAFFE6;
+	padding: 20px;
+}
+
+/* ======フッタートップ====== */
+
+.footer_top {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.footer_top .icon {
+	width: 25px;
+}
+
+.footer_top h3 {
+	font-size: 30px;
+}
+
+/* ======診察時間====== */
+
+.medical_day {
+	width: 1000px;
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	margin: 30px auto;
+}
+
+table {
+	width: 800px;
+	background-color : #fff;
+	border: 2px solid #484E47;
+	border-collapse: collapse;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+table th {
+	padding: 10px 80px;
+	border-right: 2px solid #484E47;
+	border-bottom: 2px solid #484E47;
+	box-sizing: border-box;
+}
+
+table td {
+	padding: 10px 80px;
+	border-right: 2px solid #484E47;
+	border-bottom: 2px solid #484E47;
+	box-sizing: border-box;
+}
+
+/* ======アクセス====== */
+
+.map {
+	width: 1000px;
+	display: flex;	
+	justify-content:space-between;
+	margin: 0 auto;
+}
+
+.map p {
+	margin-top: 20px;
+}
+
+iframe {
+	width: 800px;
+	height: 450px;
+}
+
+/* ======フッター情報====== */
+
+.footer_inner {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	margin: 40px auto;
+}
+
+/* ======フッターレフト====== */
+
+.footer_left_logo img {
+	width: 100%;
+	padding: 20px;
+}
+
+/* ======フッターライト====== */
+
+.footer_right_button img {
+	width: 70%;
+	margin: 50px auto;
+}
+
+.footer_right_button img:hover {
+	opacity: .8;
+}
+
+/* ======フッターナビゲーション====== */
+
+.footer_nav {
+	
+}
+
+.footer_nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer_nav ul li {
+	flex: 1;                 /* ← liを均等幅にする */
+	text-align: center;      /* 文字を中央寄せ */
+	position: relative;      /* 擬似要素の基準に */
+}
+
+.footer_nav ul li a {
+	display: block;
+	padding: 10px 0;         /* 上下に余白 */
+	text-decoration: none;
+}
+
+.footer_nav ul li a:hover {
+	color: #18CA07;
+}
+
+/* 境界線を li の右端に出す */
+.footer_nav ul li:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 20%;
+	bottom: 20%;             /* ←上下に余白を残す */
+	width: 1px;
+	background: #000;
+}
+
+.copy {
+	text-align: center;
+	padding: 20px;
+}
+
+
+
