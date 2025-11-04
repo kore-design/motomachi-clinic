@@ -124,7 +124,7 @@ header {
 /* ======ニュース====== */
 
 .content h1 {
-	font-size: 50px;
+	font-size: 40px;
 	text-align: center;
 	display: block;
 	margin: 180px auto 60px auto;
@@ -133,7 +133,7 @@ header {
 
 #news {
 	max-width: 1000px;
-	margin: 40px auto;
+	margin: 20px auto;
 }
 
 #news .news_top {
@@ -149,7 +149,7 @@ header {
 }
 
 #news .news_top h2 span {
-	font-size: 40px;
+	font-size: 30px;
 	display: block;
 	margin-bottom: 2%;
 	color: #18CA07;
@@ -171,17 +171,8 @@ header {
 
 
 .news .news_top h2 {
-	font-size: 36px;
+	font-size: 26px;
 	color: #18CA07;
-}
-
-.news .news_top h2 span {
-	font-size: 40px;
-	margin: 0 auto;
-	color: #484E47;
-	display: block;
-	margin-bottom: 2%;
-	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
 }
 
 .news .news_top a {
@@ -211,10 +202,6 @@ header {
 .news .news_content h3 {
 	font-size: 20px;
 	color: #484E47;
-}
-
-.news .news_content h3:hover {
-	text-decoration: underline;
 }
 
 .news .news_content h3 span {
@@ -649,6 +636,12 @@ iframe {
 		padding: 0 5%;
 	}
 	
+	.content #title01,
+	.content #title02,
+	.content #title03 {
+		font-size: 30px;
+	}
+	
 	#news {
 		max-width: 1000px;
 		margin: 20px auto;
@@ -661,23 +654,25 @@ iframe {
 		padding: 0;
 	}
 
-	#news .news_top h2 {
-		font-size: 28px;
+	#news .news_top h2 span {
+		font-size: 26px;
 		display: block;
 		margin-bottom: 2%;
 		color: #18CA07;
 		font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
 	}
 	
-	.news .news_top h2 {
+	#news .news_top h2 {
 		font-size: 18px;
-		color: #484E47;
-	}
-
-	.news .news_top h2 span {
-		font-size: 28px;
-		color: #18CA07;
+		display: block;
+		margin-bottom: 2%;
+		ccolor: #484E47;
 		font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	}
+	
+	.content .news .news_top h2 {
+		font-size: 26px;
+		color: #18CA07;
 	}
 
 
@@ -928,9 +923,24 @@ iframe {
 	
 	/* ======ニュース====== */
 	
+	.content {
+		padding-top: 0;
+		margin-top: 0;
+	}
+	
+	.content h1 {
+		font-size: 26px;
+	}
+	
+	.content #title01,
+	.content #title02,
+	.content #title03 {
+		font-size: 28px;
+	}
+	
 	#news {
-	max-width: 1000px;
-	margin: 40px auto;
+		max-width: 450px;
+		margin: 0px auto 10px auto;
 	}
 
 	#news .news_top {
@@ -941,9 +951,15 @@ iframe {
 	}
 
 	#news .news_top h2 {
-		font-size: 26px;
+		font-size: 14px;
 		display: block;
 		margin-bottom: 2%;
+		color: #484E47;
+		font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	}
+
+	#news .news_top h2 span {
+		font-size: 26px;
 		color: #18CA07;
 		font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
 	}
@@ -955,24 +971,15 @@ iframe {
 	}
 
 	.news .news_top {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		padding: 10px 0;
 		border-bottom: 1px dotted #808080;
 	}
 
-	.news .news_top h2 {
-		font-size: 16px;
-		color: #484E47;
-	}
-
-	.news .news_top h2 span {
-		font-size: 26px;
+	.content .news .news_top h2 {
+		font-size: 22px;
 		color: #18CA07;
-		font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
 	}
-
+	
 
 	.news .news_top p {
 		font-size: 14px;
@@ -999,7 +1006,7 @@ iframe {
 
 	.menu {
 		width: 100%;
-		margin: 0px auto 10px auto;
+		margin: 0px auto 30px auto;
 		background-color: #fff;;
 		display: flex;
 		justify-content: center;
