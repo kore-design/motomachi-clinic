@@ -808,6 +808,11 @@ iframe {
 		display: block;
 	}
 	
+	.content {
+		padding-top: 0;
+		margin-top: 0;
+	}
+	
 	#news #main_text h3 {
 	font-size: 20px;
 	}
@@ -818,8 +823,7 @@ iframe {
 
 	#news {
 		max-width: 450px;
-		margin: 40px auto;
-		padding: 5%;
+		margin: 0px auto 10px auto;
 	}
 
 	#news .news_top {
