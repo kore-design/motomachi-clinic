@@ -115,7 +115,6 @@ header {
 }
 
 
-
 #page_top{
   width: 50px;
   height: 50px;
@@ -149,7 +148,6 @@ header {
   margin: auto;
   text-align: center;
 }
-
 
 /* ======コンテンツ====== */
 
@@ -206,28 +204,8 @@ header {
 	border-bottom: 1px dotted #808080;
 }
 
-#news .news_content .date {
-	display: block;
-	color: #18CA07;
-	margin-bottom: 3%;
-}
-
-#news .news_content h2 {
-	display: block;
-	margin-bottom: 5%;
-}
-
 #news .news_content a {
-	text-decoration: underline;
-	color: #18CA07;
-	display: block;
-	margin-top: 5%;
-}
-
-#news .news_content a:hover {
-	color: #484E47;
-	display: block;
-	margin-top: 5%;
+	text-decoration: none;
 }
 
 #news .news_content h3 {
@@ -247,6 +225,16 @@ header {
 #news .news_content p {
 	font-size: 16px;
 	padding-top: 15px;
+}
+
+#news .news_content p span {
+	text-decoration: underline;
+	color: #18CA07;
+}
+
+#news .news_content p span:hover {
+	text-decoration: underline;
+	color: #484E47;
 }
 
 
@@ -561,7 +549,8 @@ iframe {
 	/*---ニュース--- */
 	
 	.content {
-		padding: 5%;
+		padding-top: 0;
+		margin-top: 0;
 	}
 	
 	#news .news_top h2 {
@@ -757,7 +746,6 @@ iframe {
 		align-items: center;
 	}
 
-	
 	.header_top_logo img {
 		max-width: 100%;
 		height: auto;
@@ -782,6 +770,7 @@ iframe {
 		margin-top: 0;
 	}
 	
+	
 	#news {
 		max-width: 450px;
 		margin: 0px auto 10px auto;
@@ -794,7 +783,6 @@ iframe {
 		padding: 10px 0;
 		border-bottom: 1px dotted #808080;
 	}
-	
 
 	#news .news_top h2 {
 		font-size: 16px;
