@@ -151,79 +151,52 @@ header {
 }
 
 
-/* ======メインビジュアル====== */
-
-.main {
-	background-color: #fff;
-	max-width: 100%;
-	padding: 20px;
-}
-
-.main_top {
-	display: flex;
-	justify-content: space-around;
-	align-content: center;
-	padding-top: 30px;
-}
-
-.main_left {
-	background-color: #fff;
-	width: 600px;
-	height: auto;
-	margin-right: 0;
-	margin-left: 60px;
-}
-
-.main_left .buildings {
-	display: block;
-	max-width: 100%;
-	height: auto;
-}
-
-.main_left h1 {
-	display: block;
-	width: 110%;
-	padding-left: 10px;
-	font-size: 36px;
-	line-height: 1.5;
-}
-
-.main_left p {
-	display: block;
-	width: 110%;
-	padding: 5px 0 10px 10px;
-	font-size: 16px;
-	line-height: 1.7;
-}
-
-.main_left .town {
-	width: 120%;
-	height: auto;
-}
-
-.main_right {
-	width: 750px;
-	height: auto;
-	margin-right: 40px;
-}
-
-.main_right img {
-	width: 100%;
-	height: auto;
-	display: block; /* ← 下に変な隙間を作らない */
-}
-
 /* ======コンテンツ====== */
 
 .content {
 	width: 100%;
+	padding: 0;
 }
 
 /* ======ニュース====== */
 
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+
 #news {
 	max-width: 1000px;
-	margin: 40px auto;
+	margin: 0 auto;
+}
+
+
+#main-box {
+	background-color: #fff;
+	width: 70%;
+	height: auto;
+	margin-top: 3%;
+}
+
+
+.main {
+	background-color: #fff;
+	padding: 0;
+	margin-top: 3%;
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+#news #main_text h3 {
+	font-size: 25px;
+}
+
+#news #main_text p {
+	font-size: 20px;
+	margin-top: 20px;
 }
 
 #news .news_top {
@@ -232,6 +205,7 @@ header {
 	align-items: center;
 	padding: 30px 0;
 	border-bottom: 1px dotted #808080;
+	margin: 20px auto;
 }
 
 #news .news_top h2 {
@@ -241,6 +215,8 @@ header {
 
 #news .news_top h2 span {
 	font-size: 40px;
+	display: block;
+	margin-bottom: 2%;
 	color: #18CA07;
 	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
 }
@@ -265,6 +241,10 @@ header {
 	border-bottom: 1px dotted #808080;
 }
 
+#news > div:nth-of-type(3) {
+	border-top: 1px dotted #808080;
+}
+
 #news .news_content a {
 	text-decoration: none;
 }
@@ -274,72 +254,26 @@ header {
 	color: #484E47;
 }
 
-#news .news_content h3:hover {
-	text-decoration: underline;
-}
-
 #news .news_content h3 span {
 	color: #18CA07;
 	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	display: block;
+	margin-top: 10px;
+	
+}
+
+#news .news_content p span {
+	font-weight: bold;
 }
 
 #news .news_content p {
 	font-size: 16px;
+	display: block;
 	padding-top: 15px;
+	margin-top: 10px;
 }
 
-/* ======メニュー====== */
 
-.menu {
-	max-width: 1000px;
-	margin: 30px auto;
-	background-color: #fff;;
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	text-align: center;
-}
-
-.menu ul {
-	list-style: none;
-	width: 300px;
-	height: auto;
-}
-
-.menu_button {
-	width: 100%;
-	margin: 20px;
-	background-color: #ECFDE9;
-	border-radius: 10px;
-	box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-}
-
-.menu_button:hover {
-	box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
-	transform: scale(0.95);
-}
-
-.menu .menu_text {
-	width: 100%;
-	height: 120px;
-	padding-top: 35px;
-	border-radius: 10px;
-	font-size: 32px;
-}
-
-.menu .menu_text span {
-	font-size: 26px;
-}
-
-.menu .menu_text a {
-	text-decoration: none;
-	color: #484E47;
-}
-
-.menu .menu_image img {
-	width: 100%;
-	height: auto;
-}
 
 /* ======フッター====== */
 
@@ -525,21 +459,6 @@ iframe {
 		padding: 2%;
 	}
 
-	.main_left h1 {
-		display: block;
-		width: 110%;
-		padding-left: 10px;
-		font-size: 23px;
-		line-height: 1.5;
-	}
-
-	.main_left p {
-		display: block;
-		width: 110%;
-		padding: 5px 0 10px 10px;
-		font-size: 14px;
-		line-height: 1.7;
-	}
 	
 	.content {
 		padding: 4%;
@@ -662,49 +581,33 @@ iframe {
 		display: none;
 	}
 	
-	/*---メイン--- */
-	
-	.main {
-		padding: 5px;
-	}
-	
-	.main_left {
-		background-color: #fff;
-		width: 50%;
-		height: auto;
-		margin-right: 0;
-		margin-left: 20px;
-	}
-	
-	.main_left .buildings {
-		display: block;
-		max-width: 80%;
-		height: auto;
-	}
-	
-	.main_left h1 {
-		display: block;
-		width: 110%;
-		padding-left: 10px;
-		font-size: 20px;
-		line-height: 1.2;
-	}
-
-	.main_left p {
-		display: block;
-		width: 110%;
-		padding: 5px 0 10px 10px;
-		font-size: 13px;
-		line-height: 1.7;
-	}
-	
-	.main_right {
-		width: 50%;
-		height: auto;
-		margin-right: 10px;
-	}
 	
 	/*---ニュース--- */
+	
+	#main-box {
+		background-color: #fff;
+		width: 100%;
+		height: auto;
+		margin-top: 5%;
+	}
+
+
+	.main {
+		background-color: #fff;
+		padding: 0;
+		margin-top: 5%;
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+		#news #main_text h3 {
+		font-size: 20px;
+	}
+
+	#news #main_text p {
+		font-size: 16px;
+	}
 	
 	.content {
 		padding: 5%;
@@ -739,40 +642,6 @@ iframe {
 		padding-top: 15px;
 	}
 	
-	/* ======メニュー====== */
-
-	.menu {
-		width: 100%;
-		margin: 0px auto 10px auto;
-		background-color: #fff;;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		text-align: center;
-		padding: 10px;
-	}
-
-
-	.menu_button {
-		width: 80%;
-		margin: 10px;
-		background-color: #ECFDE9;
-		border-radius: 10px;
-		box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-	}
-
-
-	.menu .menu_text {
-		width: 100%;
-		height: 70px;
-		padding-top: 20px;
-		border-radius: 10px;
-		font-size: 16px;
-	}
-
-	.menu .menu_text span {
-		font-size: 16px;
-	}
 
 	/* ======フッター====== */
 
@@ -952,95 +821,52 @@ iframe {
 		margin-left: 10px;
 	}
 
-	/* ======メイン====== */
-
-	.main,
-	.main_top {
-		margin: 0;
-		padding: 0;
-	}
-	
-/* PCレイアウトのflex解除 */
-	.main_top {
-		display: block !important;
-		padding: 0;
-	}
-	
-	.main_left {
-		position: relative;
-		width: 100%;
-		margin: 0;
-		padding: 0;
-	}
-
-	.left_img {
-		width: 50%;
-		margin-left: 5px;
-		padding: 0;
-	}
-	
-	/* buildings画像 */
-	.buildings {
-		width: 100%;
-		height: auto;
-		padding: 0;
-		display: block;
-	}
-
-	/* h1は右側領域に */
-	.left_text h1 {
-		width: 55%;       /* 画像の右側およそ半分 */
-		margin-left: auto;/* 右寄せ */
-		margin-top: -25%; /* 画像高さの後半に食い込ませる（重なり調整） */
-		text-align: left;
-		font-size: 18px;
-		line-height: 1.6;
-	}
-
-	/* p は 100%幅で画像の下段へ展開 */
-	.left_text p {
-		width: 95%;
-		text-align: left;
-		font-size: 14px;
-		line-height: 1.6;
-		margin-top: 10%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	/* doctor画像は80% */
-	.main_right {
-		width: 80%;
-		margin: 20px auto 0 auto;
-	}
-
-	.main_right img {
-		width: 100%;
-		height: auto;
-		display: block;
-	}
-
-	/* townも100% */
-	.town {
-		width: 100%;
-		height: auto;
-		display: block;
-		margin-top: 20px;
-	}
 	
 	/* ======ニュース====== */
+	
+	.wrapper {
+		display: block;
+	}
+	
+	#main-box {
+		background-color: #fff;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
+
+
+	.main {
+		background-color: #fff;
+		padding: 0;
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	
+	.content {
+		padding-top: 0;
+		margin-top: 0;
+	}
+	
+	#news #main_text h3 {
+	font-size: 20px;
+	}
+
+	#news #main_text p {
+		font-size: 14px;
+	}
 
 	#news {
 		max-width: 450px;
-		margin: 40px auto;
-		padding: 5%;
+		margin: 0px auto 10px auto;
 	}
 
 	#news .news_top {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 10px 0;
+		padding: 0;
 		border-bottom: 1px dotted #808080;
 	}
 
@@ -1050,7 +876,7 @@ iframe {
 	}
 
 	#news .news_top h2 span {
-		font-size: 26px;
+		font-size: 20px;
 		color: #18CA07;
 		font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
 	}
@@ -1077,40 +903,6 @@ iframe {
 		padding-top: 15px;
 	}
 	
-	/* ======メニュー====== */
-
-	.menu {
-		width: 100%;
-		margin: 0px auto 10px auto;
-		background-color: #fff;;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		text-align: center;
-		padding: 10px;
-	}
-
-
-	.menu_button {
-		width: 90%;
-		margin: 5px;
-		background-color: #ECFDE9;
-		border-radius: 10px;
-		box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-	}
-
-
-	.menu .menu_text {
-		width: 100%;
-		height: 70px;
-		padding-top: 20px;
-		border-radius: 10px;
-		font-size: 14px;
-	}
-
-	.menu .menu_text span {
-		font-size: 14px;
-	}
 
 	/* ======フッター====== */
 
