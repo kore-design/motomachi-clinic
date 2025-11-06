@@ -155,48 +155,13 @@ header {
 
 .content {
 	width: 100%;
-	padding: 0;
 }
 
 /* ======ニュース====== */
 
-.wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-}
-
-
 #news {
 	max-width: 1000px;
 	margin: 0 auto;
-}
-
-
-#main-box {
-	background-color: #fff;
-	width: 70%;
-	height: auto;
-	margin-top: 3%;
-}
-
-
-.main {
-	background-color: #fff;
-	padding: 0;
-	margin-top: 3%;
-	width: 100%;
-	height: auto;
-	display: block;
-}
-
-#news #main_text h3 {
-	font-size: 25px;
-}
-
-#news #main_text p {
-	font-size: 20px;
-	margin-top: 20px;
 }
 
 #news .news_top {
@@ -241,12 +206,28 @@ header {
 	border-bottom: 1px dotted #808080;
 }
 
-#news > div:nth-of-type(3) {
-	border-top: 1px dotted #808080;
+#news .news_content .date {
+	display: block;
+	color: #18CA07;
+	margin-bottom: 3%;
+}
+
+#news .news_content h2 {
+	display: block;
+	margin-bottom: 5%;
 }
 
 #news .news_content a {
-	text-decoration: none;
+	text-decoration: underline;
+	color: #18CA07;
+	display: block;
+	margin-top: 5%;
+}
+
+#news .news_content a:hover {
+	color: #484E47;
+	display: block;
+	margin-top: 5%;
 }
 
 #news .news_content h3 {
@@ -254,25 +235,19 @@ header {
 	color: #484E47;
 }
 
+#news .news_content h3:hover {
+	text-decoration: underline;
+}
+
 #news .news_content h3 span {
 	color: #18CA07;
 	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
-	display: block;
-	margin-top: 10px;
-	
-}
-
-#news .news_content p span {
-	font-weight: bold;
 }
 
 #news .news_content p {
 	font-size: 16px;
-	display: block;
 	padding-top: 15px;
-	margin-top: 10px;
 }
-
 
 
 /* ======フッター====== */
@@ -460,6 +435,7 @@ iframe {
 	}
 
 	
+	
 	.content {
 		padding: 4%;
 	}
@@ -584,31 +560,6 @@ iframe {
 	
 	/*---ニュース--- */
 	
-	#main-box {
-		background-color: #fff;
-		width: 100%;
-		height: auto;
-		margin-top: 5%;
-	}
-
-
-	.main {
-		background-color: #fff;
-		padding: 0;
-		margin-top: 5%;
-		width: 100%;
-		height: auto;
-		display: block;
-	}
-
-		#news #main_text h3 {
-		font-size: 20px;
-	}
-
-	#news #main_text p {
-		font-size: 16px;
-	}
-	
 	.content {
 		padding: 5%;
 	}
@@ -642,7 +593,7 @@ iframe {
 		padding-top: 15px;
 	}
 	
-
+	
 	/* ======フッター====== */
 
 	footer {
@@ -806,6 +757,7 @@ iframe {
 		align-items: center;
 	}
 
+	
 	.header_top_logo img {
 		max-width: 100%;
 		height: auto;
@@ -822,41 +774,14 @@ iframe {
 	}
 
 	
+	
 	/* ======ニュース====== */
-	
-	.wrapper {
-		display: block;
-	}
-	
-	#main-box {
-		background-color: #fff;
-		width: 100%;
-		height: auto;
-		margin: 0 auto;
-	}
 
-
-	.main {
-		background-color: #fff;
-		padding: 0;
-		width: 100%;
-		height: auto;
-		display: block;
-	}
-	
 	.content {
 		padding-top: 0;
 		margin-top: 0;
 	}
 	
-	#news #main_text h3 {
-	font-size: 20px;
-	}
-
-	#news #main_text p {
-		font-size: 14px;
-	}
-
 	#news {
 		max-width: 450px;
 		margin: 0px auto 10px auto;
@@ -866,9 +791,10 @@ iframe {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0;
+		padding: 10px 0;
 		border-bottom: 1px dotted #808080;
 	}
+	
 
 	#news .news_top h2 {
 		font-size: 16px;
@@ -876,7 +802,7 @@ iframe {
 	}
 
 	#news .news_top h2 span {
-		font-size: 20px;
+		font-size: 26px;
 		color: #18CA07;
 		font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
 	}
@@ -902,6 +828,7 @@ iframe {
 		font-size: 14px;
 		padding-top: 15px;
 	}
+	
 	
 
 	/* ======フッター====== */
