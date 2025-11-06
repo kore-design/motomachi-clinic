@@ -175,7 +175,7 @@ header {
 
 #main-box {
 	background-color: #fff;
-	width: 70%;
+	width: 65%;
 	height: auto;
 	margin-top: 3%;
 }
@@ -196,7 +196,7 @@ header {
 
 #news #main_text p {
 	font-size: 20px;
-	margin-top: 20px;
+	margin: 20px 0;
 }
 
 #news .news_top {
@@ -204,7 +204,6 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 30px 0;
-	border-bottom: 1px dotted #808080;
 	margin: 20px auto;
 }
 
@@ -239,10 +238,6 @@ header {
 #news .news_content {
 	padding: 30px 30px;
 	border-bottom: 1px dotted #808080;
-}
-
-#news > div:nth-of-type(3) {
-	border-top: 1px dotted #808080;
 }
 
 #news .news_content a {
