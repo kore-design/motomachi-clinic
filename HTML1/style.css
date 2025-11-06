@@ -1,0 +1,1070 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* ======全体====== */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	overflow-x: hidden;
+	font-family: "Kiwi Maru", serif;
+	font-weight: 400;
+	font-style: normal;
+	color: #484E47;
+}
+
+.inner_wrap {
+	padding: 4%;
+}
+
+
+/* ======ヘッダー====== */
+
+header {
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	padding: 20px;
+}
+
+#header_top {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+}
+
+.header_top_logo img {
+	max-width: 100%;
+	height: auto;
+	display: block; /* ← inline要素の余白を消すのに便利 */
+	margin: 20px;
+}
+
+.header_top_right {
+	display: flex;
+}
+
+.header_top_right .header_button,
+.header_top_right .header_tel {
+	margin: 10px;
+}
+
+.header_button img {
+	margin: 20px 20px 20px 30px;
+	max-width: 100%;
+	height: auto;
+	display: block; /* ← inline要素の余白を消すのに便利 */
+}
+
+.header_button img:hover {
+	opacity: .8;
+}
+
+.header_tel img {
+	margin: 17px 20px 30px 10px;
+	max-width: 100%;
+	height: auto;
+	display: block; /* ← inline要素の余白を消すのに便利 */
+}
+
+.header_nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header_nav ul li {
+	flex: 1;                 /* ← liを均等幅にする */
+	text-align: center;      /* 文字を中央寄せ */
+	position: relative;      /* 擬似要素の基準に */
+}
+
+.header_nav ul li a {
+	display: block;
+	padding: 10px 0;         /* 上下に余白 */
+	text-decoration: none;
+	color: #484E47;
+}
+
+.header_nav ul li a:hover {
+	color: #18CA07;
+}
+
+/* 境界線を li の右端に出す */
+.header_nav ul li:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 20%;
+	bottom: 20%;             /* ←上下に余白を残す */
+	width: 1px;
+	background: #484E47;
+}
+
+.nav_toggle,
+.nav_toggle_label {
+    display: none;
+}
+
+
+
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #18CA07;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f106';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+
+/* ======コンテンツ====== */
+
+.content {
+	width: 100%;
+	padding: 0;
+}
+
+/* ======ニュース====== */
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+
+#news {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+
+#main-box {
+	background-color: #fff;
+	width: 70%;
+	height: auto;
+	margin-top: 3%;
+}
+
+
+.main {
+	background-color: #fff;
+	padding: 0;
+	margin-top: 3%;
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+#news #main_text h3 {
+	font-size: 25px;
+}
+
+#news #main_text p {
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+#news .news_top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0;
+	border-bottom: 1px dotted #808080;
+	margin: 20px auto;
+}
+
+#news .news_top h2 {
+	font-size: 20px;
+	color: #484E47;
+}
+
+#news .news_top h2 span {
+	font-size: 40px;
+	display: block;
+	margin-bottom: 2%;
+	color: #18CA07;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+}
+
+#news .news_top a {
+	text-decoration: none;
+}
+
+#news .news_top p {
+	font-size: 20px;
+	color: #18CA07;
+	font-weight: normal;
+}
+
+#news .news_top p:hover {
+	color: #484E47;
+	text-decoration: underline;
+}
+
+#news .news_content {
+	padding: 30px 30px;
+	border-bottom: 1px dotted #808080;
+}
+
+#news > div:nth-of-type(3) {
+	border-top: 1px dotted #808080;
+}
+
+#news .news_content a {
+	text-decoration: none;
+}
+
+#news .news_content h3 {
+	font-size: 20px;
+	color: #484E47;
+}
+
+#news .news_content h3 span {
+	color: #18CA07;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	display: block;
+	margin-top: 10px;
+	
+}
+
+#news .news_content p span {
+	font-weight: bold;
+}
+
+#news .news_content p {
+	font-size: 16px;
+	display: block;
+	padding-top: 15px;
+	margin-top: 10px;
+}
+
+
+
+/* ======フッター====== */
+
+footer {
+	width: 100%;
+	background-color: #EAFFE6;
+	padding: 20px;
+	margin: 0;
+}
+
+/* ======フッタートップ====== */
+
+.footer_top {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.footer_top .icon {
+	width: 25px;
+}
+
+.footer_top h3 {
+	font-size: 30px;
+}
+
+/* ======診察時間====== */
+
+.medical_day {
+	width: 100%;
+	height: auto;
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	margin: 30px auto;
+}
+
+table {
+	max-width: 800px;
+	width: 100%;
+	height: auto;
+	background-color : #fff;
+	border: 2px solid #484E47;
+	border-collapse: collapse;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+table thead th {
+	background-color: #AAFFA2;
+}
+
+table tbody th {
+	background-color: #CFF7CC;
+}
+
+table th {
+	padding: 10px 80px;
+	border-right: 2px solid #484E47;
+	border-bottom: 2px solid #484E47;
+	box-sizing: border-box;
+}
+
+table td {
+	padding: 10px 80px;
+	border-right: 2px solid #484E47;
+	border-bottom: 2px solid #484E47;
+	box-sizing: border-box;
+}
+
+/* ======アクセス====== */
+
+.map {
+	width: 100%;
+	display: flex;	
+	justify-content:space-between;
+	margin: 0 auto;
+}
+
+.map p {
+	margin-top: 20px;
+}
+
+.iframe_wrap {
+	width: 100%;
+	max-width: 800px; /* 任意で最大幅を決める */
+	aspect-ratio: 4 / 3; /* 比率を固定したい場合（縦横比） */
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+/* ======フッター情報====== */
+
+.footer_inner {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	margin: 40px auto;
+}
+
+/* ======フッターレフト====== */
+
+.footer_left_logo img {
+	width: 80%;
+	padding: 50px;
+}
+
+/* ======フッターライト====== */
+
+.footer_right_button {
+	display: block;
+}
+
+.footer_right_button img {
+	width: 70%;
+	margin: 55px auto;
+}
+
+.footer_right_button img:hover {
+	opacity: .8;
+}
+
+/* ======フッターナビゲーション====== */
+
+.footer_nav {
+	
+}
+
+.footer_nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer_nav ul li {
+	flex: 1;                 /* ← liを均等幅にする */
+	text-align: center;      /* 文字を中央寄せ */
+	position: relative;      /* 擬似要素の基準に */
+}
+
+.footer_nav ul li a {
+	display: block;
+	padding: 10px 0;         /* 上下に余白 */
+	text-decoration: none;
+	color: #484E47;
+}
+
+.footer_nav ul li a:hover {
+	color: #18CA07;
+}
+
+/* 境界線を li の右端に出す */
+.footer_nav ul li:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 20%;
+	bottom: 20%;             /* ←上下に余白を残す */
+	width: 1px;
+	background: #000;
+}
+
+.copy {
+	text-align: center;
+	padding: 20px;
+}
+
+
+
+/* ---------------------------------------------------
+ーーーーーーーレスポンシブ対応（タブレット・PC用）ーーーーーーー
+----------------------------------------------------*/
+/* 画面幅 1100px 以下のとき */
+/* スマホ用 */
+@media screen and (max-width: 1100px){
+
+	
+	.inner_wrap {
+		padding: 2%;
+	}
+
+	
+	.content {
+		padding: 4%;
+	}
+	
+	#news {
+		padding: 2%;
+	}
+	
+	.medical_day,
+	.map {
+		display: block;
+	}
+	
+	.footer_top h3 {
+		margin: 10px 0 20px 50px;
+	} 
+	
+	.footer_top p {
+		margin: 10px 0 20px 50px;
+	} 
+	
+	table,
+	.iframe_wrap {
+		margin: 0 auto;
+	}
+
+}
+
+/* ---------------------------------------------------
+ーーーーーーーレスポンシブ対応（タブレット用）ーーーーーーー
+----------------------------------------------------*/
+/* 画面幅 768px 以下のとき */
+/* スマホ用 */
+@media screen and (max-width: 768px){
+
+	header {
+		padding: 5px;
+	}
+
+	.header_button img {
+	display: none;
+}
+	/*--- ハンバーガーメニュー--- */
+	/* メニュー本体よりアイコンを前に出す */
+	.nav_toggle_label {
+		z-index: 100001; /* メニューより前面 */
+		position: fixed; /* 念のため固定 */
+	}
+
+	/* メニュー全体 */
+	.header_nav ul {
+		z-index: 99999;
+	}
+	
+  /* メニューは非表示 */
+    .header_nav ul {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        background: #fff;
+        padding: 80px 20px;
+        transition: right 0.3s ease;
+    }
+
+    /* ハンバーガーアイコン */
+    .nav_toggle_label {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 100000; /* ← メニューより前にする */
+    }
+
+    .nav_toggle_label span,
+    .nav_toggle_label span::before,
+    .nav_toggle_label span::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #333;
+        transition: 0.3s ease;
+    }
+
+    .nav_toggle_label span::before {
+        top: -8px;
+    }
+
+    .nav_toggle_label span::after {
+        top: 8px;
+    }
+
+    /* チェックが入ったらメニュー表示 */
+    .nav_toggle:checked ~ .header_nav ul {
+        right: 0;
+    }
+
+    /* チェックが入ったらアイコン変形 */
+    .nav_toggle:checked + .nav_toggle_label span {
+        background: transparent;
+    }
+    .nav_toggle:checked + .nav_toggle_label span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .nav_toggle:checked + .nav_toggle_label span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+	/* 境界線を li の右端に出す */
+	.header_nav ul li:not(:last-child)::after {
+		display: none;
+	}
+	
+	
+	/*---ニュース--- */
+	
+	#main-box {
+		background-color: #fff;
+		width: 100%;
+		height: auto;
+		margin-top: 5%;
+	}
+
+
+	.main {
+		background-color: #fff;
+		padding: 0;
+		margin-top: 5%;
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+		#news #main_text h3 {
+		font-size: 20px;
+	}
+
+	#news #main_text p {
+		font-size: 16px;
+	}
+	
+	.content {
+		padding: 5%;
+	}
+	
+	#news .news_top h2 {
+		font-size: 18px;
+		color: #484E47;
+	}
+
+	#news .news_top h2 span {
+		font-size: 28px;
+		color: #18CA07;
+		font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	}
+
+
+	#news .news_top p {
+		font-size: 16px;
+		color: #18CA07;
+		font-weight: normal;
+	}
+
+
+	#news .news_content h3 {
+		font-size: 16px;
+		color: #484E47;
+	}
+
+	#news .news_content p {
+		font-size: 16px;
+		padding-top: 15px;
+	}
+	
+
+	/* ======フッター====== */
+
+	footer {
+		width: 100%;
+		background-color: #EAFFE6;
+		padding: 0;
+		margin: 0;
+	}
+
+	/* ======フッタートップ====== */
+
+	.footer_top {
+		width: 100%;
+		margin: 0 auto;
+		padding: 1%;
+	}
+
+	.footer_top .icon {
+		width: 20px;
+	}
+
+	.footer_top h3 {
+		display: block;
+		font-size: 16px;
+		margin: 20px 0 20px 30px;
+	}
+
+	/* ======診察時間====== */
+
+	.medical_day {
+		width: 100%;
+		height: auto;
+		padding: 0;
+		display: block;
+		margin: 20px auto;
+	}
+
+	table {
+		width: 85%;
+		height: auto;
+		background-color : #fff;
+		border: 2px solid #484E47;
+		border-collapse: collapse;
+		text-align: center;
+		box-sizing: border-box;
+		margin: 0 auto;
+	}
+
+	table thead th {
+		background-color: #AAFFA2;
+	}
+
+	table tbody th {
+		background-color: #CFF7CC;
+	}
+
+	table th {
+		padding: 8px;
+		border-right: 2px solid #484E47;
+		border-bottom: 2px solid #484E47;
+		box-sizing: border-box;
+		font-size: 14px;
+	}
+
+	table td {
+		padding: 8px;
+		border-right: 2px solid #484E47;
+		border-bottom: 2px solid #484E47;
+		box-sizing: border-box;
+		font-size: 14px;
+	}
+
+	/* ======アクセス====== */
+
+	.map {
+		width: 100%;
+		display: block;	
+		margin: 0 auto;
+	}
+
+	.map p {
+		font-size: 14px;
+		margin: 10px 0 20px 30px;
+	}
+
+	.iframe_wrap {
+		width: 85%;
+		max-width: 800px; /* 任意で最大幅を決める */
+		aspect-ratio: 4 / 3; /* 比率を固定したい場合（縦横比） */
+		margin: 0 auto;
+	}
+
+	/* ======フッター情報====== */
+
+	.footer_inner {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		margin: 40px auto;
+		padding: 1%;
+	}
+
+	/* ======フッターレフト====== */
+
+	.footer_left_logo img {
+		width: 100%;
+		padding: 5px;
+	}
+
+	/* ======フッターライト====== */
+
+	.footer_right_button {
+		display: block;
+	}
+
+	.footer_right_button img {
+		width: 95%;
+		margin: 5px 10px 5px auto;
+	}
+
+	.footer_right_button img:hover {
+		opacity: .8;
+	}
+
+	.copy {
+		text-align: center;
+		padding: 20px;
+		font-size: 12px;
+	}
+
+}
+
+
+
+/* ---------------------------------------------------
+ーーーーーーーレスポンシブ対応（スマホ用）ーーーーーーー
+----------------------------------------------------*/
+/* 画面幅 450px 以下のとき */
+/* スマホ用 */
+@media screen and (max-width: 450px){
+	
+	
+	.inner_wrap {
+		padding: 1%;
+	}
+	
+	/* ======ヘッダー====== */
+
+	header {
+		width: 100%;
+		height: auto;
+		background-color: #fff;
+		padding: 0;
+	}
+
+	#header_top {
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+	}
+
+	.header_top_logo img {
+		max-width: 100%;
+		height: auto;
+		display: block; /* ← inline要素の余白を消すのに便利 */
+		margin-left: 4%;
+	}
+
+	.header_top_right {
+		margin-top: 5%;
+	}
+
+	.header_tel {
+		margin-left: 10px;
+	}
+
+	
+	/* ======ニュース====== */
+	
+	.wrapper {
+		display: block;
+	}
+	
+	#main-box {
+		background-color: #fff;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
+
+
+	.main {
+		background-color: #fff;
+		padding: 0;
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	
+	.content {
+		padding-top: 0;
+		margin-top: 0;
+	}
+	
+	#news #main_text h3 {
+	font-size: 20px;
+	}
+
+	#news #main_text p {
+		font-size: 14px;
+	}
+
+	#news {
+		max-width: 450px;
+		margin: 0px auto 10px auto;
+	}
+
+	#news .news_top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0;
+		border-bottom: 1px dotted #808080;
+	}
+
+	#news .news_top h2 {
+		font-size: 16px;
+		color: #484E47;
+	}
+
+	#news .news_top h2 span {
+		font-size: 20px;
+		color: #18CA07;
+		font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	}
+
+
+	#news .news_top p {
+		font-size: 14px;
+		color: #18CA07;
+		font-weight: normal;
+	}
+
+	#news .news_content {
+		padding: 30px 10px;
+		border-bottom: 1px dotted #808080;
+	}
+
+	#news .news_content h3 {
+		font-size: 14px;
+		color: #484E47;
+	}
+
+	#news .news_content p {
+		font-size: 14px;
+		padding-top: 15px;
+	}
+	
+
+	/* ======フッター====== */
+
+	footer {
+		width: 100%;
+		background-color: #EAFFE6;
+		padding: 0;
+		margin: 0;
+	}
+
+	/* ======フッタートップ====== */
+
+	.footer_top {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.footer_top .icon {
+		width: 20px;
+	}
+
+	.footer_top h3 {
+		font-size: 16px;
+		margin: 10px 0 20px 10px;
+	}
+
+	/* ======診察時間====== */
+
+	.medical_day {
+		width: 100%;
+		height: auto;
+		padding: 2%;
+		display: block;
+		margin: 20px auto;
+	}
+
+	table {
+		width: 90%;
+		height: auto;
+		background-color : #fff;
+		border: 2px solid #484E47;
+		border-collapse: collapse;
+		text-align: center;
+		box-sizing: border-box;
+		margin: 0 auto;
+	}
+
+	table thead th {
+		background-color: #AAFFA2;
+	}
+
+	table tbody th {
+		background-color: #CFF7CC;
+	}
+
+	table th {
+		padding: 8px;
+		border-right: 2px solid #484E47;
+		border-bottom: 2px solid #484E47;
+		box-sizing: border-box;
+		font-size: 14px;
+	}
+
+	table td {
+		padding: 8px;
+		border-right: 2px solid #484E47;
+		border-bottom: 2px solid #484E47;
+		box-sizing: border-box;
+		font-size: 14px;
+	}
+
+	/* ======アクセス====== */
+
+	.map {
+		width: 100%;
+		display: block;	
+		margin: 0 auto;
+	}
+
+	.map p {
+		font-size: 14px;
+		margin: 10px 0 20px 10px;
+	}
+
+	.iframe_wrap {
+		width: 90%;
+		max-width: 800px; /* 任意で最大幅を決める */
+		aspect-ratio: 4 / 3; /* 比率を固定したい場合（縦横比） */
+		margin: 0 auto;
+	}
+
+	/* ======フッター情報====== */
+
+	.footer_inner {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		margin: 40px auto;
+	}
+
+	/* ======フッターレフト====== */
+
+	.footer_left_logo img {
+		width: 100%;
+		padding: 5px;
+	}
+
+	/* ======フッターライト====== */
+
+	.footer_right_button {
+		display: block;
+	}
+
+	.footer_right_button img {
+		width: 95%;
+		margin: 5px 10px 5px auto;
+	}
+
+	.footer_right_button img:hover {
+		opacity: .8;
+	}
+
+	/* ======フッターナビゲーション====== */
+
+	.footer_nav {
+
+	}
+
+	.footer_nav ul {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.footer_nav ul li {
+		flex: 1;                 /* ← liを均等幅にする */
+		text-align: center;      /* 文字を中央寄せ */
+		position: relative;      /* 擬似要素の基準に */
+	}
+
+	.footer_nav ul li a {
+		display: block;
+		padding: 10px 0;         /* 上下に余白 */
+		text-decoration: none;
+		color: #484E47;
+	}
+
+	.footer_nav ul li a:hover {
+		color: #18CA07;
+	}
+
+	/* 境界線を li の右端に出す */
+	.footer_nav ul li:not(:last-child)::after {
+		display: none;
+	}
+
+	.copy {
+		text-align: center;
+		padding: 20px;
+		font-size: 12px;
+	}
+
+
+}
